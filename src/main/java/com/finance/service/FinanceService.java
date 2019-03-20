@@ -12,8 +12,6 @@ import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
 import org.apache.commons.math3.fitting.PolynomialCurveFitter;
 import org.apache.commons.math3.fitting.WeightedObservedPoints;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
@@ -25,8 +23,6 @@ import java.util.*;
 
 @Service
 public class FinanceService {
-
-    private static final Logger log = LoggerFactory.getLogger(FinanceService.class);
 
     private final BankRepository bankRepository;
     private final SupportRepository supportRepository;

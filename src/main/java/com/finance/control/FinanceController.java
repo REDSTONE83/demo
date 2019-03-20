@@ -7,9 +7,6 @@ import com.finance.exception.WrongFormFileException;
 import com.finance.model.BankSupports;
 import com.mixin.UploadResult;
 import com.finance.service.FinanceService;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.data.web.JsonPath;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -21,8 +18,6 @@ import java.util.*;
 @RestController
 @RequestMapping("/finance")
 public class FinanceController {
-
-    private static final Logger log = LoggerFactory.getLogger(FinanceController.class);
 
     private final FinanceService financeService;
 
@@ -50,7 +45,7 @@ public class FinanceController {
         String resultSave = financeService.saveUploadSupportData(supportDataFile.getBytes());
 
         //응답전문 작성
-        Map<String, Object> responseBody = new HashMap();
+        Map<String, Object> responseBody = new HashMap<>();
         responseBody.put("result", resultSave);
 
         return responseBody;
@@ -61,7 +56,7 @@ public class FinanceController {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     private Map<String, Object> noUploadFileHandler(NoUploadFileException ex){
         //응답전문 작성
-        Map<String, Object> responseBody = new HashMap();
+        Map<String, Object> responseBody = new HashMap<>();
         responseBody.put("result", UploadResult.NO_FILE);
 
         return responseBody;
@@ -72,7 +67,7 @@ public class FinanceController {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     private Map<String, Object> noUploadFileHandler(WrongFormFileException ex){
         //응답전문 작성
-        Map<String, Object> responseBody = new HashMap();
+        Map<String, Object> responseBody = new HashMap<>();
         responseBody.put("result", UploadResult.WRONG_FORM);
 
         return responseBody;
@@ -97,7 +92,7 @@ public class FinanceController {
         }
 
         //응답전문 작성
-        Map<String, Object> responseBody = new HashMap();
+        Map<String, Object> responseBody = new HashMap<>();
         responseBody.put("banks", responseBanks);
 
         return responseBody;
@@ -149,7 +144,7 @@ public class FinanceController {
         }
 
         //응답전문 작성
-        Map<String, Object> responseBody = new HashMap();
+        Map<String, Object> responseBody = new HashMap<>();
         responseBody.put("statics", statics);
 
         return responseBody;
@@ -181,7 +176,7 @@ public class FinanceController {
         }
 
         //응답전문 작성
-        Map<String, Object> responseBody = new HashMap();
+        Map<String, Object> responseBody = new HashMap<>();
         responseBody.put("year", largestYear);
         responseBody.put("bank", largestBank);
 
@@ -223,7 +218,7 @@ public class FinanceController {
         }
 
         //응답전문 작성
-        Map<String, Object> responseBody = new HashMap();
+        Map<String, Object> responseBody = new HashMap<>();
 
         responseBody.put("largestYear", largestYear);
         responseBody.put("largestAmount", largestAmount);
@@ -248,7 +243,7 @@ public class FinanceController {
         }
 
         //응답전문 작성
-        Map<String, Object> responseBody = new HashMap();
+        Map<String, Object> responseBody = new HashMap<>();
 
         responseBody.put("bankId", forecastData.get("bankId"));
         responseBody.put("year", forecastData.get("year"));
