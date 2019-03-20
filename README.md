@@ -62,21 +62,28 @@
 API 목록
 ======================
 1. 데이터 파일에서 각 레코드를 데이터베이스에 저장
-> POST:/finance/uploadSupportData
-+ file(Multipart) : 업로드 하고자 하는 파일
+<pre><code> POST:/finance/uploadSupportData </code></pre>
+- Parameter
+  + file(Multipart) : 업로드 하고자 하는 파일
+-------------------------------
 
 2. 전체 금융기관 목록을 조회
-> GET:/finance/findAllBanks
+<pre><code> GET:/finance/findAllBanks </code></pre>
+-------------------------------
 
 3. 연도별 각 금융기관의 지원금액 합계를 출력
-> GET:/finance/findSupportStatics
+<pre><code> GET:/finance/findSupportStatics </code></pre>
+-------------------------------
 
 4. 각 연도별 각 기관의 전체 지원금액 중에서 가장 큰 금액의 기관명을 출력
-> GET:/finance/findLargestSupportBank
+<pre><code> GET:/finance/findLargestSupportBank </code></pre>
+- - -
 
 5. 전체 년도에서 외환은행의 지원금액 평균 중에서 가장 작은 금액과 큰 금액을 출력
-> GET:/finance/findBankSupportLargestAndSmallestAverage/KEB
+<pre><code> GET:/finance/findBankSupportLargestAndSmallestAverage/KEB </code></pre>
+- - -
 
 6. 특정 은행의 특정 달에 대해서 2018 년도 해당 월 금융지원 금액을 예측
-> POST:/calcForecastMonthlySupportForBank
-+ JSON : {"bankName":"금융기관명","month":"월"}
+<pre><code> POST:/calcForecastMonthlySupportForBank </code></pre>
+- Parameter
+  + JSON : {"bankName":"금융기관명","month":"월"}
