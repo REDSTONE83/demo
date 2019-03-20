@@ -43,7 +43,7 @@
 
 #### 소스코드 다운로드
 + Github에서 소스코드를 Clone
-<pre><code> git clone </code></pre>
+<pre><code> git clone https://github.com/REDSTONE83/demo.git </code></pre>
 
 #### 테스트방법
 + 소스코드 Root 폴더에서, 커맨드 창으로 아래 명령어 입력
