@@ -10,15 +10,15 @@
 * * *
 문제해결 전략
 ====================
-## 1.개발환경
+## 1. 개발환경
 - 개발방법 : TDD
 - 데이터베이스 : H2DB
 - 명명규칙 : camelCase
 
-## 2.과제선정
+## 2. 과제선정
 - 3번, 주택금융API 개발
 
-## 3.이슈해결
+## 3. 이슈해결
 #### CSV 파일 업로드 개발
 + Apache-commons CSV 라이브러리 활용 (v1.6)
 + EUC-KR로 인코딩 되어 있어, ByteStream 입력 시 반영
@@ -56,3 +56,27 @@
 #### 실행방법
 + 소스코드 Root 폴더에서, 커맨드 창으로 아래 명령어 입력
 <pre><code> mvn spring-boot:run </code></pre>
+
+
+* * *
+API 목록
+======================
+1. 데이터 파일에서 각 레코드를 데이터베이스에 저장
+> POST:/finance/uploadSupportData
++ file(Multipart) : 업로드 하고자 하는 파일
+
+2. 전체 금융기관 목록을 조회
+> GET:/finance/findAllBanks
+
+3. 연도별 각 금융기관의 지원금액 합계를 출력
+> GET:/finance/findSupportStatics
+
+4. 각 연도별 각 기관의 전체 지원금액 중에서 가장 큰 금액의 기관명을 출력
+> GET:/finance/findLargestSupportBank
+
+5. 전체 년도에서 외환은행의 지원금액 평균 중에서 가장 작은 금액과 큰 금액을 출력
+> GET:/finance/findBankSupportLargestAndSmallestAverage/KEB
+
+6. 특정 은행의 특정 달에 대해서 2018 년도 해당 월 금융지원 금액을 예측
+> POST:/calcForecastMonthlySupportForBank
++ JSON : {"bankName":"금융기관명","month":"월"}
