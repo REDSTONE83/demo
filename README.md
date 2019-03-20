@@ -79,11 +79,11 @@ API 목록
 <pre><code> GET:/finance/findLargestSupportBank </code></pre>
 
 
-## 5. 전체 년도에서 외환은행의 지원금액 평균 중에서 가장 작은 금액과 큰 금액을 출력
+## 5. 외환은행 자료에서 지원금액 평균 중에서 가장 작은 금액과 큰 금액을 출력
 <pre><code> GET:/finance/findBankSupportLargestAndSmallestAverage/KEB </code></pre>
 
 
-## 6. 특정 은행의 특정 달에 대해서 2018 년도 해당 월 금융지원 금액을 예측
+## 6. 특정 금융기관의 특정 월에 대해서 차년도 해당 월 금융지원 금액을 예측
 <pre><code> POST:/calcForecastMonthlySupportForBank </code></pre>
 - Parameter
   + JSON : {"bankName":"금융기관명","month":"월"}
