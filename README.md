@@ -48,15 +48,15 @@
 <pre><code> cd demo </code></pre>
 
 #### 테스트
-+ 소스코드 Root 폴더에서, 커맨드 창으로 아래 명령어 입력
++ 소스코드 폴더에서, 아래 명령어 입력
 <pre><code> mvn test </code></pre>
   
 #### 빌드
-+ 소스코드 Root 폴더에서, 커맨드 창으로 아래 명령어 입력
++ 소스코드 폴더에서, 아래 명령어 입력
 <pre><code> mvn compile </code></pre>
 
 #### 실행
-+ 소스코드 Root 폴더에서, 커맨드 창으로 아래 명령어 입력
++ 소스코드 폴더에서, 아래 명령어 입력
 <pre><code> mvn spring-boot:run </code></pre>
 
 
