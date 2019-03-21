@@ -86,6 +86,6 @@ API 목록
 
 
 ## 6. 특정 금융기관의 특정 월에 대해서 차년도 해당 월 금융지원 금액을 예측
-<pre><code> POST:/calcForecastMonthlySupportForBank </code></pre>
+<pre><code> POST:/finance/calcForecastMonthlySupportForBank </code></pre>
 - Parameter
   + JSON : { "bankName" : "금융기관명" , "month" : "월" }
